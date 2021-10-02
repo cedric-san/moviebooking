@@ -1,5 +1,6 @@
 import './Cards.css';
 import React from 'react';
+import MovieCard from './MovieCards/MovieCard';
 
 const Cards = (props) => {
   const dataBase = props.movieCollection;
@@ -7,6 +8,7 @@ const Cards = (props) => {
   return (
     <div>
       <h3 className="heading">Movies</h3>
+      <MovieCard />
       <div>
         <ul>
           {dataBase.map((movie) => {
