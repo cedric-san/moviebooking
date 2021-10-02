@@ -1,4 +1,6 @@
 import React from 'react';
+import Form from '../Form/Form';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 const SubNavBar = (props) => {
   return (
@@ -23,6 +25,9 @@ const SubNavBar = (props) => {
           Events
         </a>
       </li>
+      <BrowserRouter>
+        <Route path="/form" component={Form}></Route>
+      </BrowserRouter>
     </ul>
   );
 };
