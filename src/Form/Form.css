@@ -1,0 +1,14 @@
+a {
+  text-decoration: none;
+}
+
+* {
+  padding: 5px;
+}
+
+#login {
+  margin-left: 50px;
+}
+#fpassword {
+  margin-left: 137px;
+}

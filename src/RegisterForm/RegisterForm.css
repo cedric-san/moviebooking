@@ -1,0 +1,22 @@
+a {
+  text-decoration: none;
+}
+.container {
+  width: 300px;
+  border: 1px solid rgba(128, 128, 128, 0.2);
+  border-radius: 15px;
+}
+* {
+  padding: 5px;
+}
+
+button {
+  margin-left:70px;
+}
+#fpassword {
+  margin-left: 137px;
+}
+
+label[id='terms'] {
+  margin-top: -10px;
+}
