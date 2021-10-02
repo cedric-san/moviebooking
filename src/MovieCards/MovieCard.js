@@ -1,26 +1,25 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './MovieCard.css';
-import Button from '../Button/Button';
 
 import './MovieCard.css';
 const movieCard = (props) => {
-  const [title, setTitle] = useState('');
-  const [genre, setGenre] = useState('');
-  const [pic, setPic] = useState('');
-  const [movie, setMovie] = useState({});
+  const [title, setTitle] = useState();
+  const [genre, setGenre] = useState();
+  const [pic, setPic] = useState();
+  const [movie, setMovie] = useState([]);
   const [count, setCount] = useState(330);
   const baseUrl = `https://api.themoviedb.org/3/movie/${count}?api_key=7c9047007cc6ef342aa6ce8db6cb4851`;
-  const dataBase = [{ title: title, genre: genre, pic: pic }];
+
   useEffect(() => {
     axios.get(baseUrl).then((response) => {
       const movieTitle = response.data;
       setTitle(movieTitle.title);
       setGenre(movieTitle.genres[0].name);
       setPic(movieTitle.poster_path);
-      setMovie({ title, genre, pic });
+      setMovie([...movie, { title: title, genre: genre, pic: pic }]);
     });
-  }, []);
+  }, [count]);
   console.log(movie);
   const onChangeHandler = () => {
     setCount(count + 1);
@@ -29,7 +28,7 @@ const movieCard = (props) => {
   return (
     <div>
       <ul>
-        {dataBase.map((movie, index) => {
+        {movie.map((movie, index) => {
           return (
             <li key={index}>
               <div>
