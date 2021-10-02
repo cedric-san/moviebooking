@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import './MovieCard.css';
 import Button from '../Button/Button';
 
 import './MovieCard.css';
@@ -7,20 +8,25 @@ const movieCard = (props) => {
   const [title, setTitle] = useState('');
   const [genre, setGenre] = useState('');
   const [pic, setPic] = useState('');
-  const [count, setCount] = useState(142);
+  const [dataaBase, setDataaBase] = useState({});
+  const [count, setCount] = useState(330);
   const baseUrl = `https://api.themoviedb.org/3/movie/${count}?api_key=7c9047007cc6ef342aa6ce8db6cb4851`;
-  const dataBase = [{ title: title, genre: genre, }];
+  const dataBase = [{ title: title, genre: genre, pic: pic }];
   useEffect(() => {
     axios.get(baseUrl).then((response) => {
       const movieTitle = response.data;
-      setGenre(movieTitle.genres[0].name);
       setTitle(movieTitle.title);
+      setGenre(movieTitle.genres[0].name);
       setPic(movieTitle.poster_path);
-      dataBase.push({ title, genre });
-      console.log(dataBase[0]);
+      dataBase.push({ title, genre, pic });
+      dataaBase.push();
+      console.log(dataaBase);
     });
-  });
-
+  }, [count]);
+  const onChangeHandler = () => {
+    setCount(count + 1);
+    console.log(count);
+  };
   const imgUrl = 'https://image.tmdb.org/t/p/w200';
   return (
     <div>
@@ -42,7 +48,9 @@ const movieCard = (props) => {
           );
         })}
       </ul>
-      <Button className="nextBtn" title=">" />
+      <button className="btn nextBtn" onClick={onChangeHandler}>
+        {'>'}
+      </button>
     </div>
   );
 };
