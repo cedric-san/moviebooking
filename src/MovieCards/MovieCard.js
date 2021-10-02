@@ -4,10 +4,11 @@ const movieCard = (props) => {
   const dataBase = props.movieCollection;
   return (
     <div>
+      <img className="imgSize" src={props.img} alt="" />
       <ul>
-        {dataBase.map((movie) => {
+        {dataBase.map((movie, index) => {
           return (
-            <li>
+            <li key={index}>
               <div>
                 <div className="movieCards">
                   <img
@@ -18,9 +19,9 @@ const movieCard = (props) => {
                 </div>
 
                 <div>
-                  <h4>{movie.title}</h4>
+                  <h4>{props.title}</h4>
                   <p>
-                    {movie.genre} <span>{movie.isAvailable}</span>
+                    {props.genres} <span>{movie.isAvailable}</span>
                   </p>
                 </div>
               </div>
