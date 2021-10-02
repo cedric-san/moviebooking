@@ -1,7 +1,9 @@
 import React from 'react';
 import './Button.css';
 const Button = (props) => {
-  return <button className="btn login">{props.title}</button>;
+  const nxtbtn = props.className;
+
+  return <button className={`btn ${nxtbtn}`}>{props.title}</button>;
 };
 
 export default Button;

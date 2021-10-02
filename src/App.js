@@ -2,6 +2,7 @@ import React from 'react';
 import './style.css';
 import NavBar from './NavBar';
 import Cards from './Cards';
+import SubNavBar from './SubNavBar/SubNavBar';
 
 import RegisterForm from './RegisterForm/RegisterForm';
 import { useState } from 'react';
@@ -21,6 +22,7 @@ export default function App() {
   return (
     <div>
       <NavBar title={navbarhead} formChange={formChange} />
+      <SubNavBar />
       <Banners />
       <Cards />
     </div>

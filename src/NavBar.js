@@ -11,7 +11,7 @@ const NavBar = (props) => {
           <input
             type="search"
             className="form-control rounded"
-            placeholder="Search Movie"
+            placeholder="Search for Movies..."
             aria-label="Search"
             aria-describedby="search-addon"
           />
