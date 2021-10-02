@@ -7,7 +7,7 @@ import RegisterForm from './RegisterForm/RegisterForm';
 import { useState } from 'react';
 import { useEffect } from 'react';
 import axios from 'axios';
-
+import Banners from './Banners/Banners';
 export default function App() {
   const [form, updateForm] = useState(false);
   const [title, setTitle] = useState('');
@@ -31,8 +31,6 @@ export default function App() {
 
   const navbarhead = {
     title: 'My Movie Booking',
-    btn_1: 'Login',
-    btn_2: 'Sign Up',
   };
   const movieDataBase = [
     { title: 'Tenent', genre: 'Thriller', isAvailable: true, grade: 'Good' },
@@ -58,6 +56,8 @@ export default function App() {
   return (
     <div>
       <NavBar title={navbarhead} formChange={formChange} />
+      <Banners />
+      <Cards movieCollection={movieDataBase} />
     </div>
   );
 }
