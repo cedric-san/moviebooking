@@ -32,32 +32,12 @@ export default function App() {
   const navbarhead = {
     title: 'My Movie Booking',
   };
-  const movieDataBase = [
-    { title: 'Tenent', genre: 'Thriller', isAvailable: true, grade: 'Good' },
-    { title: 'Inception', genre: 'Thriller', isAvailable: true },
-    { title: 'God Father', genre: 'Drama', isAvailable: false },
-    { title: 'The Dark Knight', genre: 'Drama', isAvailable: true },
-    { title: 'Shutter Island', genre: 'Drama', isAvailable: false },
-  ];
-  const movieDataBase1 = [
-    { title: 'Master', genre: 'Thriller', isAvailable: true },
-    { title: 'Sarpatta Parambarai', genre: 'Thriller', isAvailable: true },
-    { title: 'Karnan', genre: 'Drama', isAvailable: true },
-    { title: 'Ponniyin Selvan', genre: 'Drama', isAvailable: false },
-    { title: 'Sultan', genre: 'Drama', isAvailable: false },
-  ];
-  const movieDataBase2 = [
-    { title: 'Beast', genre: 'Thriller', isAvailable: false },
-    { title: 'Vikram', genre: 'Thriller', isAvailable: false },
-    { title: 'Annaatthe', genre: 'Drama', isAvailable: false },
-    { title: 'Valimai', genre: 'Drama', isAvailable: true },
-    { title: 'Cobra', genre: 'D rama', isAvailable: true },
-  ];
+
   return (
     <div>
       <NavBar title={navbarhead} formChange={formChange} />
       <Banners />
-      <Cards movieCollection={movieDataBase} />
+      <Cards />
     </div>
   );
 }

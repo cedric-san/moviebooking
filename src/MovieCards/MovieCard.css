@@ -1,0 +1,23 @@
+.movieCards {
+  background-color: blue;
+  width: 200px;
+  height: 300px;
+  margin-left: 20px;
+  margin-top: 60px;
+  border-radius: 10px;
+}
+ul {
+  list-style-type: none;
+  display: flex;
+  align-content: space-around;
+  justify-content: center;
+}
+h4,
+p {
+  margin-left: 25px;
+  font-size: 13pt;
+}
+.imgSize {
+  width: 200px;
+  height: 300px;
+}
