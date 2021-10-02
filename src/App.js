@@ -58,10 +58,6 @@ export default function App() {
   return (
     <div>
       <NavBar title={navbarhead} formChange={formChange} />
-      {/*{form ? <Form /> : <RegisterForm />}*/}
-      <Cards movieCollection={movieDataBase} cardTitle="Recommended Movies" />
-      <Cards movieCollection={movieDataBase1} cardTitle="Features Movies" />
-      <Cards movieCollection={movieDataBase2} cardTitle="Fans Favourite" />
     </div>
   );
 }
