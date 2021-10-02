@@ -1,12 +1,15 @@
 import React from 'react';
 import './navbarstyle.css';
 import Button from './Button/Button';
+
 const NavBar = (props) => {
   return (
     <nav className="navbar navbar-light bg-light">
       <div className="container-fluid">
         <a className="navbar-brand">{props.title.title}</a>
+
         <Button title="Log In/Sign Up" />
+
         <form className="d-flex input-group w-auto">
           <input
             type="search"
