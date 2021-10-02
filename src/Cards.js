@@ -2,6 +2,7 @@ import './Cards.css';
 import React, { useState, useEffect } from 'react';
 import MovieCard from './MovieCards/MovieCard';
 import axios from 'axios';
+import Button from './Button/Button';
 
 const Cards = (props) => {
   const movieDataBase = [
@@ -23,13 +24,15 @@ const Cards = (props) => {
       console.log(response.data);
       setTitle(movieTitle.title);
       setPic(movieTitle.poster_path);
+      console.log(movieTitle.poster_path);
     });
   });
 
   return (
     <div>
       <h3 className="heading">Movies</h3>
-      <MovieCard movieCollection={movieDataBase} title={title} img={pic} />
+
+      <MovieCard movieCollection={movieDataBase} title={title} pic={pic} />
     </div>
   );
 };
