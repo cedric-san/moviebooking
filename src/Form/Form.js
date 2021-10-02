@@ -2,13 +2,14 @@ import React from 'react';
 import { Component } from 'react';
 import './Form.css';
 
+
 class Form extends Component {
   constructor() {
     super();
     this.state = {
       name: '',
       password: '',
-      buttonName: 'LOG IN'
+      buttonName: 'LOG IN',
     };
     this.changeHandler = this.changeHandler.bind(this);
     this.submitHandler = this.submitHandler.bind(this);
@@ -16,7 +17,7 @@ class Form extends Component {
   changeHandler(e) {
     this.setState({
       [e.target.name]: e.target.value,
-      [e.target.name]: e.target.value
+      [e.target.name]: e.target.value,
     });
   }
   submitHandler(e) {
