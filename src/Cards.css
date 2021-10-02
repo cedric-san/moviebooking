@@ -17,3 +17,10 @@ ul {
   align-content: space-around;
   justify-content: center;
 }
+.heading {
+  font-size: 40px;
+  text-decoration: underline;
+  text-decoration-color: blue;
+  padding: 10px;
+  text-align: center;
+}

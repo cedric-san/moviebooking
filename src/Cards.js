@@ -6,11 +6,7 @@ const Cards = (props) => {
 
   return (
     <div>
-      <h3 style={{ backgroundColor: '#BEBEBE', padding: '10px' }}>
-        {props.cardTitle} -------------------{' '}
-        <span style={{ color: 'blue' }}>Blue</span>-Available{'  '}
-        <span style={{ color: 'red' }}>Red</span>-Not Available
-      </h3>
+      <h3 className="heading">Movies</h3>
       <div>
         <ul>
           {dataBase.map((movie) => {
