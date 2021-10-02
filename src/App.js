@@ -3,6 +3,7 @@ import './style.css';
 import NavBar from './NavBar';
 import Cards from './Cards';
 import SubNavBar from './SubNavBar/SubNavBar';
+import Footer from './Footer/Footer';
 
 import RegisterForm from './RegisterForm/RegisterForm';
 import { useState } from 'react';
@@ -25,6 +26,7 @@ export default function App() {
       <SubNavBar />
       <Banners />
       <Cards />
+      <Footer />
     </div>
   );
 }

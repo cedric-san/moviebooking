@@ -11,7 +11,12 @@ const movieCard = (props) => {
   const [dataaBase, setDataaBase] = useState({});
   const [count, setCount] = useState(330);
   const baseUrl = `https://api.themoviedb.org/3/movie/${count}?api_key=7c9047007cc6ef342aa6ce8db6cb4851`;
-  const dataBase = [{ title: title, genre: genre, pic: pic }];
+  const dataBase = [
+    { title: title, genre: genre, pic: pic },
+    { title: title, genre: genre, pic: pic },
+    { title: title, genre: genre, pic: pic },
+    { title: title, genre: genre, pic: pic },
+  ];
   useEffect(() => {
     axios.get(baseUrl).then((response) => {
       const movieTitle = response.data;
