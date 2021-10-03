@@ -7,7 +7,7 @@ const movieCard = (props) => {
   const [title, setTitle] = useState();
   const [genre, setGenre] = useState();
   const [pic, setPic] = useState();
-
+  const [data, setData] = useState([]);
   const [movie, setMovie] = useState([]);
   const [count, setCount] = useState(330);
   const baseUrl = `https://api.themoviedb.org/3/movie/${count}?api_key=7c9047007cc6ef342aa6ce8db6cb4851`;
@@ -18,6 +18,7 @@ const movieCard = (props) => {
       setTitle(movieTitle.title);
       setGenre(movieTitle.genres[0].name);
       setPic(movieTitle.poster_path);
+
       setMovie([
         ...movie,
         {
