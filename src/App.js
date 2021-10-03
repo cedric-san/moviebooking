@@ -4,6 +4,7 @@ import NavBar from './NavBar';
 import Cards from './Cards';
 import SubNavBar from './SubNavBar/SubNavBar';
 import Footer from './Footer/Footer';
+import { BrowserRouter, Route, Switch, Link } from 'react-router-dom';
 
 import RegisterForm from './RegisterForm/RegisterForm';
 import { useState } from 'react';
@@ -22,11 +23,13 @@ export default function App() {
 
   return (
     <div>
-      <NavBar title={navbarhead} formChange={formChange} />
-      <SubNavBar />
-      <Banners />
-      <Cards />
-      <Footer />
+      <BrowserRouter>
+        <NavBar title={navbarhead} formChange={formChange} />
+        <SubNavBar />
+        <Banners />
+        <Cards />
+        <Footer />
+      </BrowserRouter>
     </div>
   );
 }
