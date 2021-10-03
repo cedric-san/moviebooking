@@ -2,15 +2,16 @@ import React from 'react';
 import { Component } from 'react';
 import './Form.css';
 
-
 class Form extends Component {
   constructor() {
     super();
-    this.state = {
-      name: '',
-      password: '',
-      buttonName: 'LOG IN',
-    };
+    this.state = [
+      {
+        name: '',
+        password: '',
+        buttonName: 'LOG IN',
+      },
+    ];
     this.changeHandler = this.changeHandler.bind(this);
     this.submitHandler = this.submitHandler.bind(this);
   }

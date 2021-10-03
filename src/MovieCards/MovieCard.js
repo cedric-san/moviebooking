@@ -33,7 +33,7 @@ const movieCard = (props) => {
     setCount(count + 1);
   };
   const ondecreaseHandler = () => {
-    setMovie(movie.pop());
+    console.log(index);
   };
   return (
     <div>
@@ -42,7 +42,6 @@ const movieCard = (props) => {
       </button>
       <ul>
         {movie.map((movie, index) => {
-          console.log(movie.pic);
           return (
             <li key={index}>
               <div>
