@@ -6,7 +6,6 @@ const Cards = (props) => {
   return (
     <div>
       <h3 className="heading">Movies</h3>
-
       <MovieCard />
     </div>
   );

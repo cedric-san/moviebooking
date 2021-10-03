@@ -11,7 +11,7 @@ const movieCard = (props) => {
   const [count, setCount] = useState(330);
   const baseUrl = `https://api.themoviedb.org/3/movie/${count}?api_key=7c9047007cc6ef342aa6ce8db6cb4851`;
   const imgUrl = 'https://image.tmdb.org/t/p/w200';
-
+  const [offBtn, setOffBtn] = useState(false);
   useEffect(() => {
     axios.get(baseUrl).then((response) => {
       const movieTitle = response.data;
@@ -62,7 +62,11 @@ const movieCard = (props) => {
           );
         })}
       </ul>
-      <button className="btn nextBtn" onClick={onChangeHandler}>
+      <button
+        className="btn nextBtn"
+        onClick={onChangeHandler}
+        disabled={offBtn}
+      >
         {'>'}
       </button>
     </div>
