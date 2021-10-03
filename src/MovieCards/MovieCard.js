@@ -17,7 +17,7 @@ const movieCard = (props) => {
       setTitle(movieTitle.title);
       setGenre(movieTitle.genres[0].name);
       setPic(movieTitle.poster_path);
-      setMovie([...movie, { title: title, genre: genre, pic: pic }]);
+      setMovie([{ title: title, genre: genre, pic: pic }]);
     });
   }, [count]);
   console.log(movie);
