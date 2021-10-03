@@ -32,10 +32,14 @@ const movieCard = (props) => {
   const onChangeHandler = () => {
     setCount(count + 1);
   };
-
-
+  const ondecreaseHandler = () => {
+    setMovie(movie.pop());
+  };
   return (
     <div>
+      <button className="btn prevBtn" onClick={ondecreaseHandler}>
+        {'<'}
+      </button>
       <ul>
         {movie.map((movie, index) => {
           console.log(movie.pic);
