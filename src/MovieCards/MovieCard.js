@@ -32,34 +32,12 @@ const movieCard = (props) => {
   const onChangeHandler = () => {
     setCount(count + 1);
   };
-  const dataBase = [
-    {
-      genre: 'Adventure',
-      pic: '/jElpCJkSaRPYwIMwZY28gOKV7BK.jpg',
-      title: 'The Lost World: Jurassic Park',
-    },
-    {
-      genre: 'Adventure',
-      pic: '/xyxqgEuxmxOj3mZ3tPSzgqpCBi7.jpg',
-      title: 'Jurassic Park III',
-    },
-    {
-      genre: 'Action',
-      pic: '/eKpK8FaQDpkgp3HHm3YrIDqUjWh.jpg',
-      title: 'Inspector Gadget',
-    },
-    {
-      genre: 'Drama',
-      pic: '/qbYgqOczabWNn2XKwgMtVrntD6P.jpg',
-      title: 'Once Upon a Time in the West',
-    },
-  ];
-  console.log(dataBase[2].pic);
+
 
   return (
     <div>
       <ul>
-        {dataBase.map((movie, index) => {
+        {movie.map((movie, index) => {
           console.log(movie.pic);
           return (
             <li key={index}>
