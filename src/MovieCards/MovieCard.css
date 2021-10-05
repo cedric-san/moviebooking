@@ -40,3 +40,10 @@ p {
   margin-left: 200px;
   margin-top: 200px;
 }
+ul {
+  min-width: 100px;
+  max-width: 700px;
+  /* border: solid #3b479d 2px; */
+  margin: auto;
+  overflow: hidden;
+}
