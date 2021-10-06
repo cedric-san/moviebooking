@@ -1,7 +1,10 @@
 import React from 'react';
 
 const Error = () => {
-  return <h1>File Not Found</h1>;
+  const style = {
+    textAlign: 'center',
+  };
+  return <h1 style={style}>File Not Found</h1>;
 };
 
 export default Error;

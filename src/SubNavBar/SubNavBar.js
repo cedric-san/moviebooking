@@ -1,24 +1,25 @@
 import React from 'react';
 import Error from './Error';
+import Cards from '../Cards';
 import { Route, Switch, Link } from 'react-router-dom';
 const SubNavBar = (props) => {
   return (
     <>
       <ul className="nav justify-content-center">
         <li className="nav-item">
-          <a className="nav-link active" href="#">
+          <Link to="/" className="nav-link active" href="#">
             Homes
-          </a>
+          </Link>
         </li>
         <li className="nav-item">
-          <a className="nav-link" href="#">
+          <Link to="/movie" className="nav-link" href="#">
             Movies
-          </a>
+          </Link>
         </li>
         <li className="nav-item">
-          <a className="nav-link" href="#">
+          <Link to="/theatres" className="nav-link" href="#">
             Theatres
-          </a>
+          </Link>
         </li>
         <li className="nav-item">
           <Link to="/event" className="nav-link" href="#">
@@ -27,7 +28,11 @@ const SubNavBar = (props) => {
         </li>
       </ul>
       <Switch>
-        <Route exact path="/event" component={Error} />
+        <Route exact path="/" />
+        <Route exact path="/movie" component={Error} />
+        <Route exact path="/theatres" component={Error} />
+        <Route exact path="/events" component={Error} />
+        <Route exact path="" component={Error} />
       </Switch>
     </>
   );

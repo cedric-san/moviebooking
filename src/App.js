@@ -5,9 +5,6 @@ import Cards from './Cards';
 import SubNavBar from './SubNavBar/SubNavBar';
 import Footer from './Footer/Footer';
 import { BrowserRouter } from 'react-router-dom';
-import Error from './SubNavBar/Error';
-
-import RegisterForm from './RegisterForm/RegisterForm';
 import { useState } from 'react';
 
 import Banners from './Banners/Banners';
