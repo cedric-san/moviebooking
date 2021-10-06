@@ -22,13 +22,13 @@ export default function App() {
   const navbarhead = {
     title: 'My Movie Booking',
   };
-
+  const isBanner = false;
   return (
     <div>
       <BrowserRouter>
         <NavBar title={navbarhead} formChange={formChange} />
         <SubNavBar />
-        <Banners />
+        {isBanner ? <Banners /> : null}
         <Switch>
           <Route path="/form" component={Form} />
           <Route exact path="/movie" component={Cards} />
@@ -36,7 +36,7 @@ export default function App() {
           <Route exact path="/event" component={Events} />
           <Route path="/" component={Cards} />
         </Switch>
-        <Footer />
+        <Footer title="footer menu" />
       </BrowserRouter>
     </div>
   );
