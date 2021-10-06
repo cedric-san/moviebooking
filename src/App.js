@@ -9,6 +9,7 @@ import { useState } from 'react';
 import Error from './SubNavBar/Error';
 import Theatres from './Theatres/Theatres';
 import Events from './Events/Events';
+import Form from './Form/Form';
 
 import Banners from './Banners/Banners';
 export default function App() {
@@ -29,10 +30,11 @@ export default function App() {
         <SubNavBar />
         <Banners />
         <Switch>
+          <Route path="/form" component={Form} />
           <Route exact path="/movie" component={Cards} />
           <Route exact path="/theatres" component={Theatres} />
           <Route exact path="/event" component={Events} />
-          <Route path="/" component={(Cards, Theatres, Events)} />
+          <Route path="/" component={Cards} />
         </Switch>
         <Footer />
       </BrowserRouter>
