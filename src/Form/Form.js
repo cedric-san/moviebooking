@@ -24,7 +24,8 @@ class Form extends Component {
   submitHandler(e) {
     e.preventDefault();
     let result = this.state;
-    console.log(result);
+
+    console.log(final);
   }
 
   render() {
