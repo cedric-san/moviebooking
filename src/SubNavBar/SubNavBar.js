@@ -1,7 +1,7 @@
 import React from 'react';
 import Error from './Error';
-import Cards from '../Cards';
-import { Route, Switch, Link } from 'react-router-dom';
+
+import { Link } from 'react-router-dom';
 const SubNavBar = (props) => {
   return (
     <>
@@ -27,13 +27,6 @@ const SubNavBar = (props) => {
           </Link>
         </li>
       </ul>
-      <Switch>
-        <Route exact path="/" />
-        <Route exact path="/movie" component={Error} />
-        <Route exact path="/theatres" component={Error} />
-        <Route exact path="/events" component={Error} />
-        <Route exact path="" component={Error} />
-      </Switch>
     </>
   );
 };
